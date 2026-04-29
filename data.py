@@ -1,11 +1,13 @@
-import requests
-import configuration
-import data
+headers = {
+    "Content-Type": "application/json"
+}
 
+user_body = {
+    "firstName": "Dairon",
+    "phone": "+521111111111",
+    "address": "Mi casa"
+}
 
-def post_products_kits(products_ids):
-    return requests.post(
-        configuration.URL_SERVICE + configuration.PRODUCTS_KITS_PATH,
-        json=products_ids,
-        headers=data.headers
-    )
+kit_body = {
+    "name": "Mi primer kit"
+}
